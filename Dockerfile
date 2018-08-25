@@ -5,6 +5,7 @@ LABEL MAINTAINER=nigelpoulton@hotmail.com
 # Install Node etc...
 RUN yum -y update; yum clean all
 RUN yum -y install epel-release; yum clean all
+RUN yum -y uninstall npm
 RUN yum -y install nodejs npm; yum clean all
 
 # Copy source code to /src in container
